@@ -12,7 +12,7 @@ const TechStack = () => {
         >
           Tools I{" "}
           <span
-            className="text-[#888]"
+            className="px-1 text-[#c0bdb8]"
             style={{
               fontFamily: "'Playfair Display', serif",
               fontStyle: "italic",

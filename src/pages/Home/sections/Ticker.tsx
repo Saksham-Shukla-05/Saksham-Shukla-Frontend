@@ -4,7 +4,7 @@ const items = [
   "MongoDB",
   "TypeScript",
   "Express",
-  "Next.js",
+  "",
   "Tailwind",
   "Vercel",
   "Git",
@@ -22,7 +22,7 @@ const Ticker = () => {
             key={i}
             className="flex items-center gap-3 px-6 py-3 whitespace-nowrap"
           >
-            <span className="font-mono text-[10.5px] font-semibold text-[#555] uppercase tracking-[2.5px]">
+            <span className="font-mono text-[10.5px] font-semibold text-[#bebcbc] uppercase tracking-[2.5px]">
               {item}
             </span>
             <div className="w-1 h-1 rounded-full bg-[#f56038] flex-shrink-0" />

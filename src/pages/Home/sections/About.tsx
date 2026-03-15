@@ -1,5 +1,6 @@
+import { FileText, Github, Linkedin } from "lucide-react";
 import SectionLabel from "../../../components/shared/SectionLabel";
-
+import { SiLeetcode } from "react-icons/si";
 const cards = [
   {
     icon: "⚡",
@@ -17,13 +18,13 @@ const cards = [
     icon: "📈",
     bg: "rgba(74,222,128,.07)",
     title: "Always leveling up",
-    body: "TypeScript, Docker & AWS — currently in progress.",
+    body: "Python & AWS — currently in progress.",
   },
   {
     icon: "🎯",
     bg: "rgba(59,130,246,.07)",
     title: "Thinks before typing",
-    body: "350+ LeetCode problems. Algorithms first.",
+    body: "450+ LeetCode problems. Algorithms first.",
   },
 ];
 
@@ -40,7 +41,7 @@ const About = () => {
           >
             A dev who ships{" "}
             <span
-              className="text-[#888]"
+              className="text-[#c0bdb8]"
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
@@ -71,27 +72,35 @@ const About = () => {
           <div className="flex gap-3 flex-wrap">
             {[
               {
-                label: "↗ GitHub",
+                label: "GitHub",
+                icon: <Github className="w-4 h-4" />,
                 href: "https://github.com/Saksham-Shukla-05",
               },
               {
-                label: "↗ LinkedIn",
+                label: "LinkedIn",
+                icon: <Linkedin className="w-4 h-4" />,
                 href: "https://www.linkedin.com/in/saksham-shukla-9758602a6",
               },
               {
-                label: "↗ LeetCode",
+                label: "LeetCode",
+                icon: <SiLeetcode className="w-4 h-4" />,
                 href: "https://leetcode.com/u/saksham729/",
               },
-              { label: "⬇ Resume", href: "#" },
+              {
+                label: "Resume",
+                icon: <FileText className="w-4 h-4" />,
+                href: "#",
+              },
             ].map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 border border-white/[0.11] rounded-[9px] text-[12px] font-semibold text-[#999] hover:border-[#f56038] hover:text-[#f56038] hover:bg-[#f56038]/10 transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2 border border-white/[0.11] rounded-[9px] text-[12px] font-semibold text-[#999] hover:border-[#f56038] hover:text-[#f56038] hover:bg-[#f56038]/10 transition-all duration-200"
               >
-                {l.label}
+                {l.icon}
+                <span>{l.label}</span>
               </a>
             ))}
           </div>

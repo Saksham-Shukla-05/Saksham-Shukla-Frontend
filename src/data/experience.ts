@@ -28,7 +28,7 @@ export const experiences: IExperience[] = [
       "React",
       "Node.js",
       "Express",
-      "MySql",
+      "MySQL",
       "TypeScript",
       "Google Translate API",
       "AI APIs",
@@ -57,6 +57,15 @@ export const roadmap: IRoadmapItem[] = [
     color: "#f56038",
   },
   {
+    id: "typescript",
+    name: "TypeScript",
+    description:
+      "Actively using in projects — type systems, generics, type-safe APIs.",
+    status: "now",
+    progress: 50,
+    color: "#f56038",
+  },
+  {
     id: "aws",
     name: "AWS Cloud",
     description:
@@ -75,15 +84,6 @@ export const roadmap: IRoadmapItem[] = [
     color: "#888",
   },
   {
-    id: "dsa",
-    name: "DSA",
-    description:
-      "Consistent — 350+ LeetCode problems solved. Arrays, Trees, DP, Graphs.",
-    status: "done",
-    progress: 70,
-    color: "#4ade80",
-  },
-  {
     id: "mern",
     name: "MERN Stack",
     description:
@@ -93,13 +93,13 @@ export const roadmap: IRoadmapItem[] = [
     color: "#4ade80",
   },
   {
-    id: "typescript",
-    name: "TypeScript",
+    id: "dsa",
+    name: "DSA",
     description:
-      "Actively using in projects — type systems, generics, type-safe APIs.",
-    status: "now",
-    progress: 50,
-    color: "#f56038",
+      "Consistent — 350+ LeetCode problems solved. Arrays, Trees, DP, Graphs.",
+    status: "done",
+    progress: 70,
+    color: "#4ade80",
   },
 ];
 
@@ -107,10 +107,11 @@ export const stack: IStackItem[] = [
   { name: "JavaScript", color: "#f5c518" },
   { name: "TypeScript", color: "#3b82f6" },
   { name: "React", color: "#61dafb" },
-  { name: "Next.js", color: "#ffffff" },
+  // { name: "Next.js", color: "#ffffff" }, // ← fixed empty entry
   { name: "Node.js", color: "#84cc16" },
   { name: "Express.js", color: "#888888" },
   { name: "MongoDB", color: "#4ade80" },
+  { name: "MySQL", color: "#4479a1" }, // ← added since you use it at OneClarity
   { name: "Tailwind CSS", color: "#06b6d4" },
   { name: "Java", color: "#f97316" },
   { name: "Git & GitHub", color: "#f97316" },
