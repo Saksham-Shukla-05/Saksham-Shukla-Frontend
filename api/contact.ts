@@ -1,14 +1,15 @@
 import { Resend } from "resend";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req: Request) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } = req.body;
 
     await resend.emails.send({
       from: "contact@sakshamshukla.in",
@@ -28,16 +29,9 @@ export default async function handler(req: Request) {
       replyTo: email,
     });
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    return res.status(200).json({ success: true });
   } catch (error) {
-    console.log(error);
-
-    return new Response(JSON.stringify({ error: "Failed to send email" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    console.error("Resend error:", error);
+    return res.status(500).json({ error: "Failed to send email" });
   }
 }
