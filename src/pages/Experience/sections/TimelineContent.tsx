@@ -52,7 +52,7 @@ export const OneClarityContent = () => (
     <ul className="space-y-2.5 mb-5">
       {[
         "Built shareable link invitation feature used across the platform",
-        "Developed multiple dashboard APIs for employee and manager roles",
+        "Developed multiple dashboard APIs for employee, manager and admin roles",
         "Built Open Labs — open source initiative with superadmin & user contribution APIs",
         "Created blog pages, stories, and career page APIs",
         "Implemented multilingual support using Google Translate API with country detection and dynamic modals",

@@ -111,7 +111,6 @@ const Navbar = () => {
           </div>
 
           {/* MOBILE HAMBURGER */}
-          {/* MOBILE HAMBURGER */}
           <button
             className="md:hidden flex flex-col gap-[5px] items-end justify-center w-8 h-8 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}

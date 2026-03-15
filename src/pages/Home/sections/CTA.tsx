@@ -73,7 +73,7 @@ const CTA = () => {
         </div>
 
         {/* Grid — form + info */}
-        <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 items-start">
+        <div className="grid md:grid-cols-[1fr_1.4fr] gap-15 items-start">
           {/* Left — info */}
           <div className="flex flex-col gap-6">
             <div>

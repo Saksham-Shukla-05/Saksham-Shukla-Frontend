@@ -89,7 +89,7 @@ const About = () => {
               {
                 label: "Resume",
                 icon: <FileText className="w-4 h-4" />,
-                href: "#",
+                href: "/Saksham-Shukla-Resume.pdf",
               },
             ].map((l) => (
               <a

@@ -17,7 +17,7 @@ export const experiences: IExperience[] = [
     logo: "https://onecalrity.s3.ap-south-1.amazonaws.com/company-logos/1773140212061-eb28faac-c266-4e0e-a091-9c58da949d2d.png",
     highlights: [
       "Built shareable link invitation feature used across the platform",
-      "Developed multiple dashboard APIs for employee and manager roles",
+      "Developed multiple dashboard APIs for employee , manager , admin roles",
       "Built Open Labs — open source initiative with superadmin and user contribution APIs",
       "Created blog pages, stories, and career page APIs",
       "Built a template preview application",

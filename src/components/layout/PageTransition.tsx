@@ -11,7 +11,7 @@ const pageVariants = {
     y: 0,
     transition: {
       duration: 0.4,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: "easeOut" as const,
     },
   },
   exit: {
@@ -19,11 +19,10 @@ const pageVariants = {
     y: -8,
     transition: {
       duration: 0.2,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: "easeIn" as const,
     },
   },
 };
-
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
