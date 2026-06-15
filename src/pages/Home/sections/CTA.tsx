@@ -50,46 +50,38 @@ const CTA = () => {
   };
 
   return (
-    <section className="px-6 py-24 relative overflow-hidden border-t border-white/[0.06]">
-      {/* Orb */}
-      <div className="absolute w-[700px] h-[700px] bg-[#f56038] rounded-full blur-[140px] opacity-[0.06] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-
-      <div className="relative z-10 max-w-5xl mx-auto">
+    <section className="px-6 py-24 border-t border-[#EDE7DD]/6">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="font-mono text-[10px] text-[#f56038] tracking-[3px] uppercase mb-4">
-            contact
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="font-mono text-[10px] font-medium text-[#C2613C] tracking-[2.5px]">
+              03
+            </span>
+            <span className="font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase">
+              contact
+            </span>
+          </div>
           <h2
-            className="font-bold text-[#eeebe5] tracking-[-2.5px] leading-[0.96] mb-5"
+            className="leading-none mb-5"
             style={{ fontSize: "clamp(42px, 6vw, 72px)" }}
           >
             Let's build
             <br />
-            something{" "}
-            <span
-              className="text-[#f56038]"
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontStyle: "italic",
-                fontWeight: 400,
-              }}
-            >
-              great.
-            </span>
+            something <span className="italic text-[#C2613C]">great.</span>
           </h2>
-          <p className="text-[14.5px] text-[#999] leading-[1.75] font-light max-w-[400px] mx-auto">
+          <p className="text-[14.5px] text-[#AFA89D] leading-[1.75] font-light max-w-[400px] mx-auto">
             Open to full-time roles, internships, and freelance projects. Drop
             me a message and I'll get back to you.
           </p>
         </div>
 
         {/* Grid — form + info */}
-        <div className="grid md:grid-cols-[1fr_1.4fr] gap-15 items-start">
+        <div className="grid md:grid-cols-[1fr_1.4fr] gap-15 md:gap-24 items-start">
           {/* Left — info */}
           <div className="flex flex-col gap-6">
             <div>
-              <p className="text-[11px] font-mono text-[#f56038] tracking-[2px] uppercase mb-4">
+              <p className="font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-4">
                 Reach out directly
               </p>
               <div className="flex flex-col gap-3">
@@ -103,8 +95,8 @@ const CTA = () => {
                   {
                     label: "LinkedIn",
                     icon: <Linkedin className="w-4 h-4" />,
-                    href: "https://www.linkedin.com/in/saksham-shukla-9758602a6",
-                    value: "saksham-shukla",
+                    href: "https://www.linkedin.com/in/sakshamshukla-dev/",
+                    value: "sakshamshukla-dev",
                   },
                   {
                     label: "GitHub",
@@ -118,13 +110,13 @@ const CTA = () => {
                     href={l.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between px-4 py-3 bg-[#111] border border-white/[0.06] rounded-[11px] hover:border-[#f56038]/30 hover:bg-[#f56038]/5 transition-all duration-200 group"
+                    className="flex items-center justify-between px-4 py-3 bg-[#28251F] border border-[#EDE7DD]/6 rounded-xl hover:border-[#EDE7DD]/16 transition-all duration-200 group"
                   >
-                    <p className="text-[12px] flex gap-2 font-semibold text-[#bebcbc] group-hover:text-[#f56038] transition-colors">
+                    <p className="text-[12px] flex gap-2 font-semibold text-[#AFA89D] group-hover:text-[#EDE7DD] transition-colors">
                       {l.icon}
                       {l.label}
                     </p>
-                    <span className="text-[11px] text-[#444] font-mono group-hover:text-[#c0bdb8] transition-colors">
+                    <span className="text-[11px] text-[#756E64] font-mono group-hover:text-[#AFA89D] transition-colors">
                       {l.value}
                     </span>
                   </a>
@@ -133,14 +125,14 @@ const CTA = () => {
             </div>
 
             {/* Availability */}
-            <div className="bg-[#111] border border-white/[0.06] rounded-[14px] p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse" />
-                <span className="text-[12px] font-semibold text-[#4ade80]">
+            <div className="bg-[#28251F] border border-[#EDE7DD]/6 rounded-2xl p-5">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-2 h-2 bg-[#7C8F65]" />
+                <span className="font-mono text-[10px] font-medium text-[#7C8F65] tracking-[2.5px] uppercase">
                   Available for work
                 </span>
               </div>
-              <p className="text-[12px] text-[#bebcbc] leading-[1.6]">
+              <p className="text-[12px] text-[#AFA89D] leading-[1.6]">
                 Currently open to full-time roles, internships, and freelance
                 projects.
               </p>
@@ -148,20 +140,20 @@ const CTA = () => {
           </div>
 
           {/* Right — form */}
-          <div className="bg-[#111] border border-white/[0.06] rounded-[18px] p-7">
+          <div className="bg-[#28251F] border border-[#EDE7DD]/6 rounded-2xl p-7">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col gap-5"
             >
               {/* Name */}
               <div>
-                <label className="block text-[11px] font-mono text-[#bebcbc] tracking-[1.5px] uppercase mb-2">
+                <label className="block font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-2">
                   Name
                 </label>
                 <input
                   {...register("name")}
                   placeholder="Your name"
-                  className="w-full bg-[#0d0d0d] border border-white/[0.08] rounded-[10px] px-4 py-3 text-[13.5px] text-[#eeebe5] placeholder:text-[#333] outline-none focus:border-[#f56038]/50 focus:ring-1 focus:ring-[#f56038]/20 transition-all duration-200"
+                  className="w-full bg-[#1F1D1B] border border-[#EDE7DD]/8 rounded-xl px-4 py-3 text-[13.5px] text-[#EDE7DD] placeholder:text-[#756E64] outline-none focus:border-[#C2613C]/40 focus:ring-1 focus:ring-[#C2613C]/20 transition-all duration-200"
                 />
                 {errors.name && (
                   <p className="text-[11px] text-red-400 mt-1.5">
@@ -172,13 +164,13 @@ const CTA = () => {
 
               {/* Email */}
               <div>
-                <label className="block text-[11px] font-mono text-[#bebcbc] tracking-[1.5px] uppercase mb-2">
+                <label className="block font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-2">
                   Email
                 </label>
                 <input
                   {...register("email")}
                   placeholder="your@email.com"
-                  className="w-full bg-[#0d0d0d] border border-white/[0.08] rounded-[10px] px-4 py-3 text-[13.5px] text-[#eeebe5] placeholder:text-[#333] outline-none focus:border-[#f56038]/50 focus:ring-1 focus:ring-[#f56038]/20 transition-all duration-200"
+                  className="w-full bg-[#1F1D1B] border border-[#EDE7DD]/8 rounded-xl px-4 py-3 text-[13.5px] text-[#EDE7DD] placeholder:text-[#756E64] outline-none focus:border-[#C2613C]/40 focus:ring-1 focus:ring-[#C2613C]/20 transition-all duration-200"
                 />
                 {errors.email && (
                   <p className="text-[11px] text-red-400 mt-1.5">
@@ -189,14 +181,14 @@ const CTA = () => {
 
               {/* Message */}
               <div>
-                <label className="block text-[11px] font-mono text-[#bebcbc] tracking-[1.5px] uppercase mb-2">
+                <label className="block font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-2">
                   Message
                 </label>
                 <textarea
                   {...register("message")}
                   placeholder="Tell me about your project, role, or just say hi..."
                   rows={5}
-                  className="w-full bg-[#0d0d0d] border border-white/[0.08] rounded-[10px] px-4 py-3 text-[13.5px] text-[#eeebe5] placeholder:text-[#333] outline-none focus:border-[#f56038]/50 focus:ring-1 focus:ring-[#f56038]/20 transition-all duration-200 resize-none"
+                  className="w-full bg-[#1F1D1B] border border-[#EDE7DD]/8 rounded-xl px-4 py-3 text-[13.5px] text-[#EDE7DD] placeholder:text-[#756E64] outline-none focus:border-[#C2613C]/40 focus:ring-1 focus:ring-[#C2613C]/20 transition-all duration-200 resize-none"
                 />
                 {errors.message && (
                   <p className="text-[11px] text-red-400 mt-1.5">
@@ -209,10 +201,10 @@ const CTA = () => {
               <button
                 type="submit"
                 disabled={loading || sent}
-                className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-[11px] text-[13.5px] font-semibold transition-all duration-200 ${
+                className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-[13.5px] font-semibold transition-all duration-200 ${
                   sent
-                    ? "bg-[#4ade80]/20 text-[#4ade80] border border-[#4ade80]/30 cursor-default"
-                    : "bg-[#f56038] text-white hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,96,56,0.28)] disabled:opacity-60 disabled:cursor-not-allowed"
+                    ? "bg-[#7C8F65]/15 text-[#7C8F65] border border-[#7C8F65]/25 cursor-default"
+                    : "bg-[#C2613C] text-[#1F1D1B] hover:bg-[#CC6E49] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
                 }`}
               >
                 {loading ? (

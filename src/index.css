@@ -2,20 +2,32 @@
 
 @layer base {
   :root {
-    --text-primary: #f0ede8;
-    --text-secondary: #c0bdb8;
-    --text-muted: #888882;
-    --text-dim: #606060;
-    --border: rgba(255, 255, 255, 0.07);
-    --border2: rgba(255, 255, 255, 0.12);
-    --surface: #111111;
-    --accent: #f56038;
+    /* Canvas — 60% */
+    --bg-canvas: #1f1d1b;
+    --surface: #28251f;
+    --surface-hover: #322e27;
+
+    /* Structure — 30% */
+    --text-primary: #ede7dd;
+    --text-secondary: #afa89d;
+    --text-tertiary: #756e64;
+    --border: rgba(237, 231, 221, 0.08);
+    --border2: rgba(237, 231, 221, 0.16);
+
+    /* Accent — 10% */
+    --accent: #c2613c;
+    --accent-soft: rgba(194, 97, 60, 0.12);
+    --accent-foreground: #1f1d1b;
+
+    /* Functional */
+    --positive: #7c8f65;
+    --positive-soft: rgba(124, 143, 101, 0.12);
   }
 
   body {
-    background-color: #090909;
+    background-color: var(--bg-canvas);
     color: var(--text-primary);
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -26,8 +38,24 @@
   h4,
   h5,
   h6 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Playfair Display", serif;
     color: var(--text-primary);
+    text-wrap: balance;
+  }
+
+  h1,
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
   }
 
   p {

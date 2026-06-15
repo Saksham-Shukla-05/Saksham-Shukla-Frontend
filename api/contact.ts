@@ -15,7 +15,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     await resend.emails.send({
       from: "contact@sakshamshukla.in",
       to: "shuklasaksham729@gmail.com",
-      subject: `New message from ${name} — sakshamshukla.in`,
+      subject: `New message from ${name} via sakshamshukla.in`,
       replyTo: email,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
@@ -34,31 +34,53 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     await resend.emails.send({
       from: "Saksham Shukla <contact@sakshamshukla.in>",
       to: email,
-      subject: `Thanks for reaching out, ${name}!`,
+      subject: `Thanks for getting in touch, ${name}`,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #f0ede8; padding: 40px; border-radius: 12px;">
-          
-          <h2 style="color: #f56038; margin-bottom: 8px;">Hey ${name}! 👋</h2>
-          <p style="color: #c0bdb8; line-height: 1.8; margin-bottom: 16px;">
-            Thanks for reaching out — I've received your message and will get back to you as soon as possible, usually within 24–48 hours.
-          </p>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto;">
+          <div style="background-color: #1F1D1B; color: #EDE7DD; border: 1px solid rgba(237,231,221,0.08); border-radius: 6px; padding: 48px 40px;">
 
-          <div style="background: #161616; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 24px 0;">
-            <p style="color: #888; font-size: 12px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">Your message</p>
-            <p style="color: #f0ede8; line-height: 1.7;">${message}</p>
+            <p style="font-family: 'Courier New', Courier, monospace; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #C2613C; margin: 0 0 28px;">
+              Message received
+            </p>
+
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 26px; font-weight: 700; line-height: 1.35; color: #EDE7DD; margin: 0 0 18px;">
+              Thanks for getting in touch, ${name}.
+            </h1>
+
+            <p style="font-size: 14px; line-height: 1.8; color: #AFA89D; margin: 0 0 28px;">
+              I've received your message and will reply within 24 to 48 hours. Here's a copy of what you sent, for your records.
+            </p>
+
+            <div style="background-color: #28251F; border: 1px solid rgba(237,231,221,0.06); border-radius: 8px; padding: 20px 24px; margin: 0 0 32px;">
+              <p style="font-family: 'Courier New', Courier, monospace; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #756E64; margin: 0 0 10px;">
+                Your message
+              </p>
+              <p style="font-size: 14px; line-height: 1.7; color: #EDE7DD; margin: 0;">
+                ${message}
+              </p>
+            </div>
+
+            <p style="font-size: 14px; line-height: 1.8; color: #AFA89D; margin: 0 0 36px;">
+              While you wait, feel free to look through my work at
+              <a href="https://sakshamshukla.in" style="color: #C2613C; text-decoration: none; font-weight: 600;">sakshamshukla.in</a>
+              or connect on
+              <a href="https://www.linkedin.com/in/sakshamshukla-dev/" style="color: #C2613C; text-decoration: none; font-weight: 600;">LinkedIn</a>.
+            </p>
+
+            <div style="border-top: 1px solid rgba(237,231,221,0.06); padding-top: 24px;">
+              <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 17px; font-weight: 700; margin: 0 0 4px;">
+                <span style="color: #EDE7DD;">Saksham </span><span style="color: #C2613C; font-weight: 400;">Shukla</span>
+              </p>
+              <p style="font-family: 'Courier New', Courier, monospace; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #756E64; margin: 0;">
+                Full Stack Engineer
+              </p>
+            </div>
+
           </div>
 
-          <p style="color: #c0bdb8; line-height: 1.8;">
-            In the meantime, feel free to check out my work at 
-            <a href="https://sakshamshukla.in" style="color: #f56038;">sakshamshukla.in</a> 
-            or connect with me on 
-            <a href="https://www.linkedin.com/in/saksham-shukla-9758602a6" style="color: #f56038;">LinkedIn</a>.
+          <p style="font-family: 'Courier New', Courier, monospace; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #756E64; text-align: center; margin: 20px 0 0;">
+            Automated message. Replies are not monitored.
           </p>
-
-          <hr style="border: none; border-top: 1px solid #222; margin: 32px 0;"/>
-          
-          <p style="color: #f56038; font-size: 14px; font-weight: 600;">Saksham Shukla</p>
-          <p style="color: #555; font-size: 12px;">Full Stack Developer · sakshamshukla.in</p>
         </div>
       `,
     });

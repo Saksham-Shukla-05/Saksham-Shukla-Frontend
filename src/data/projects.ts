@@ -5,7 +5,7 @@ export const projects: IProject[] = [
     _id: "6893ae02d906ed71bb279001",
     title: "Text Vault",
     description:
-      "A full stack anonymous messaging platform built for secure, identity-free communication. Features a unique shareable link system where users receive messages without exposing who they are — ideal for honest feedback, open confessions, and candid conversations. Integrated Nodemailer for email notifications and Zod for robust schema validation on both client and server.",
+      "A full stack anonymous messaging platform built for secure, identity-free communication. Features a unique shareable link system where users receive messages without exposing who they are, ideal for honest feedback, open confessions, and candid conversations. Integrated Nodemailer for email notifications and Zod for robust schema validation on both client and server.",
     slug: "text-vault",
     techStack: [
       "TypeScript",
@@ -42,7 +42,7 @@ export const projects: IProject[] = [
     _id: "6893bffed906ed71bb279030",
     title: "Taco Bell UI Recreation",
     description:
-      "A pixel-accurate recreation of the Taco Bell official website UI — built to sharpen frontend precision and attention to detail. Replicated the layout structure, visual hierarchy, navigation patterns, and interactive elements as closely as possible. Cloudinary was used for optimized image delivery across the interface.",
+      "A pixel-accurate recreation of the Taco Bell official website UI, built to sharpen frontend precision and attention to detail. Replicated the layout structure, visual hierarchy, navigation patterns, and interactive elements as closely as possible. Cloudinary was used for optimized image delivery across the interface.",
     slug: "taco-bell-ui",
     techStack: ["React", "Tailwind", "JavaScript", "Cloudinary"],
     liveLink: "https://tacobell-frontend-clone.vercel.app/",
@@ -52,7 +52,7 @@ export const projects: IProject[] = [
     _id: "6893c2a0d906ed71bb279034",
     title: "Netflix Landing Page",
     description:
-      "A responsive, visually accurate clone of the Netflix landing page — built as a frontend exercise in layout precision and responsive design. Replicates Netflix's hero section, feature highlights, FAQ accordion, and footer using semantic HTML, custom CSS, and vanilla JavaScript for interactivity.",
+      "A responsive, visually accurate clone of the Netflix landing page, built as a frontend exercise in layout precision and responsive design. Replicates Netflix's hero section, feature highlights, FAQ accordion, and footer using semantic HTML, custom CSS, and vanilla JavaScript for interactivity.",
     slug: "netflix-landing-page",
     techStack: ["HTML", "CSS", "JavaScript"],
     liveLink: "https://netflix-landing-page-lovat-eight.vercel.app/",
@@ -72,7 +72,7 @@ export const projects: IProject[] = [
     _id: "6893c521d906ed71bb27903e",
     title: "Todo App",
     description:
-      "A minimal yet fully functional task management app demonstrating core CRUD operations — create, read, update, and delete. Built with vanilla HTML, CSS, and JavaScript, it focuses on clean DOM manipulation, event handling, and persistent state management using localStorage to retain tasks across page reloads.",
+      "A minimal yet fully functional task management app demonstrating core CRUD operations: create, read, update, and delete. Built with vanilla HTML, CSS, and JavaScript, it focuses on clean DOM manipulation, event handling, and persistent state management using localStorage to retain tasks across page reloads.",
     slug: "todo-app",
     techStack: ["HTML", "CSS", "JavaScript"],
     liveLink: "https://saksham-shukla-05.github.io/To-do-list/",
@@ -82,7 +82,7 @@ export const projects: IProject[] = [
     _id: "6893c5b8d906ed71bb279041",
     title: "Bubble Game",
     description:
-      "An interactive browser-based game built entirely with vanilla HTML, CSS, and JavaScript. Players must click the correct numbered bubble within a countdown timer — testing speed and accuracy. Demonstrates dynamic DOM generation, real-time score tracking, countdown timer logic, and responsive game state management without any external libraries.",
+      "An interactive browser-based game built entirely with vanilla HTML, CSS, and JavaScript. Players must click the correct numbered bubble within a countdown timer, testing speed and accuracy. Demonstrates dynamic DOM generation, real-time score tracking, countdown timer logic, and responsive game state management without any external libraries.",
     slug: "bubble-game",
     techStack: ["HTML", "CSS", "JavaScript"],
     liveLink: "https://saksham-shukla-05.github.io/Bubble_Game/",

@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       {/* DESKTOP + MOBILE TOP BAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[#090909]/80 backdrop-blur-xl">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#EDE7DD]/6 bg-[#1F1D1B]/85 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-2">
             <svg
@@ -24,12 +24,12 @@ const Navbar = () => {
               className="w-9 h-9"
             >
               {/* Subtle background circle */}
-              <circle cx="50" cy="50" r="45" fill="#f56038" opacity="0.04" />
+              <circle cx="50" cy="50" r="45" fill="#C2613C" opacity="0.05" />
 
               {/* Corner bracket — top left */}
               <path
                 d="M18 32 L18 18 L32 18"
-                stroke="#f56038"
+                stroke="#C2613C"
                 strokeWidth="3"
                 strokeLinecap="square"
               />
@@ -37,7 +37,7 @@ const Navbar = () => {
               {/* Corner bracket — bottom right */}
               <path
                 d="M82 68 L82 82 L68 82"
-                stroke="#f56038"
+                stroke="#C2613C"
                 strokeWidth="3"
                 strokeLinecap="square"
               />
@@ -45,16 +45,16 @@ const Navbar = () => {
               {/* S shape — thinner, sharper */}
               <path
                 d="M68 28 L32 28 L32 50 L68 50 L68 72 L32 72"
-                stroke="#f0ede8"
+                stroke="#EDE7DD"
                 strokeWidth="10"
                 strokeLinejoin="miter"
                 strokeLinecap="butt"
               />
 
-              {/* S shape — orange inner highlight */}
+              {/* S shape — accent inner highlight */}
               <path
                 d="M68 28 L32 28 L32 50 L68 50 L68 72 L32 72"
-                stroke="#f56038"
+                stroke="#C2613C"
                 strokeWidth="3"
                 strokeLinejoin="miter"
                 strokeLinecap="butt"
@@ -62,7 +62,7 @@ const Navbar = () => {
               />
 
               {/* Blinking cursor */}
-              <rect x="70" y="66" width="9" height="14" rx="1" fill="#f56038">
+              <rect x="70" y="66" width="9" height="14" rx="1" fill="#C2613C">
                 <animate
                   attributeName="opacity"
                   values="1;0;1"
@@ -72,15 +72,13 @@ const Navbar = () => {
               </rect>
 
               {/* Corner dots — accent */}
-              <circle cx="18" cy="18" r="2" fill="#f56038" opacity="0.5" />
-              <circle cx="82" cy="82" r="2" fill="#f56038" opacity="0.5" />
+              <circle cx="18" cy="18" r="2" fill="#C2613C" opacity="0.5" />
+              <circle cx="82" cy="82" r="2" fill="#C2613C" opacity="0.5" />
             </svg>
 
-            <span className="text-[15px] font-bold tracking-tight text-[#eeebe5]">
+            <span className="font-['Playfair_Display'] text-[17px] font-bold tracking-tight text-[#EDE7DD]">
               Saksham{" "}
-              <span className=" font-normal text-[#f56038] text-[16px]">
-                Shukla
-              </span>
+              <span className="font-normal text-[#C2613C]">Shukla</span>
             </span>
           </NavLink>
 
@@ -93,8 +91,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg text-[13px] font-medium transition-all duration-150 ${
                     isActive
-                      ? "text-[#eeebe5] bg-white/5"
-                      : "text-[#c0bdb8] hover:text-[#eeebe5] hover:bg-white/5"
+                      ? "text-[#EDE7DD] bg-[#28251F]"
+                      : "text-[#AFA89D] hover:text-[#EDE7DD] hover:bg-[#28251F]"
                   }`
                 }
               >
@@ -104,7 +102,7 @@ const Navbar = () => {
 
             <a
               href="mailto:shuklasaksham729@gmail.com"
-              className="ml-3 px-5 py-2 bg-[#f56038] text-white rounded-lg text-[13px] font-semibold transition-all duration-200 hover:brightness-110 hover:shadow-[0_6px_20px_rgba(245,96,56,0.3)] hover:-translate-y-px"
+              className="ml-3 px-5 py-2 bg-[#C2613C] text-[#1F1D1B] rounded-lg text-[13px] font-semibold transition-all duration-200 hover:bg-[#CC6E49] hover:-translate-y-px"
             >
               Hire me
             </a>
@@ -116,12 +114,12 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X size={22} className="text-[#c0bdb8]" />
+              <X size={22} className="text-[#AFA89D]" />
             ) : (
               <>
-                <span className="block h-[2px] w-6 bg-[#f0ede8] rounded-full" />
-                <span className="block h-[2px] w-3 bg-[#f56038] rounded-full" />
-                <span className="block h-[2px] w-6 bg-[#f0ede8] rounded-full" />
+                <span className="block h-[2px] w-6 bg-[#EDE7DD] rounded-full" />
+                <span className="block h-[2px] w-3 bg-[#C2613C] rounded-full" />
+                <span className="block h-[2px] w-6 bg-[#EDE7DD] rounded-full" />
               </>
             )}
           </button>
@@ -142,19 +140,19 @@ const Navbar = () => {
 
         {/* Sidebar panel */}
         <div
-          className={`fixed top-0 right-0 h-full w-72 z-50 bg-[#111] border-l border-white/[0.06] transition-transform duration-300 ease-in-out md:hidden ${
+          className={`fixed top-0 right-0 h-full w-72 z-50 bg-[#28251F] border-l border-[#EDE7DD]/6 transition-transform duration-300 ease-in-out md:hidden ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Sidebar header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.06]">
-            <span className="text-[14px] font-bold text-[#eeebe5]">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-[#EDE7DD]/6">
+            <span className="font-['Playfair_Display'] text-[16px] font-bold text-[#EDE7DD]">
               Saksham{" "}
-              <span className=" font-normal text-[#f56038]">Shukla</span>
+              <span className="font-normal text-[#C2613C]">Shukla</span>
             </span>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-[#c0bdb8] hover:text-[#eeebe5] transition-colors"
+              className="text-[#AFA89D] hover:text-[#EDE7DD] transition-colors"
             >
               <X size={20} />
             </button>
@@ -170,18 +168,18 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `px-4 py-3 rounded-lg text-[14px] font-medium transition-all duration-150 ${
                     isActive
-                      ? "text-[#eeebe5] bg-white/5"
-                      : "text-[#c0bdb8] hover:text-[#eeebe5] hover:bg-white/5"
+                      ? "text-[#EDE7DD] bg-[#322E27]"
+                      : "text-[#AFA89D] hover:text-[#EDE7DD] hover:bg-[#322E27]"
                   }`
                 }
               >
                 {link.label}
               </NavLink>
             ))}
-            <div className="mt-4 pt-4 border-t border-white/[0.06]">
+            <div className="mt-4 pt-4 border-t border-[#EDE7DD]/6">
               <a
                 href="mailto:shuklasaksham729@gmail.com"
-                className="block w-full text-center px-4 py-3 bg-[#f56038] text-white rounded-lg text-[14px] font-semibold"
+                className="block w-full text-center px-4 py-3 bg-[#C2613C] text-[#1F1D1B] rounded-lg text-[14px] font-semibold"
                 onClick={() => setIsOpen(false)}
               >
                 Hire me

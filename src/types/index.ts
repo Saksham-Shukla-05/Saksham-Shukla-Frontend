@@ -46,7 +46,9 @@ export interface IRoadmapItem {
 // Tech Stack item
 export interface IStackItem {
   name: string;
-  color: string;
+  category: string;
+  /** 0-100: how "unlocked" this skill is, for in-progress items */
+  learning?: number;
 }
 
 // Nav link

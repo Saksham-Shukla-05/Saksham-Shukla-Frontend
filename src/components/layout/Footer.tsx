@@ -14,10 +14,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-white/[0.06] px-6 pt-16 pb-10 relative bg-[#0a0a0a]">
+    <footer className="border-t border-[#EDE7DD]/6 px-6 pt-16 pb-10 relative bg-[#1A1816]">
       <div className="max-w-6xl mx-auto">
         {/* Top row — logo + tagline */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-12 border-b border-white/[0.06] mb-12">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-12 border-b border-[#EDE7DD]/6 mb-12">
           <div className="flex md:ml-5 ml-1 items-center gap-3">
             {/* Logo mark */}
             <svg
@@ -26,35 +26,35 @@ const Footer = () => {
               fill="none"
               className="w-9 h-9"
             >
-              <circle cx="50" cy="50" r="45" fill="#f56038" opacity="0.04" />
+              <circle cx="50" cy="50" r="45" fill="#C2613C" opacity="0.05" />
               <path
                 d="M18 32 L18 18 L32 18"
-                stroke="#f56038"
+                stroke="#C2613C"
                 strokeWidth="3"
                 strokeLinecap="square"
               />
               <path
                 d="M82 68 L82 82 L68 82"
-                stroke="#f56038"
+                stroke="#C2613C"
                 strokeWidth="3"
                 strokeLinecap="square"
               />
               <path
                 d="M68 28 L32 28 L32 50 L68 50 L68 72 L32 72"
-                stroke="#f0ede8"
+                stroke="#EDE7DD"
                 strokeWidth="10"
                 strokeLinejoin="miter"
                 strokeLinecap="butt"
               />
               <path
                 d="M68 28 L32 28 L32 50 L68 50 L68 72 L32 72"
-                stroke="#f56038"
+                stroke="#C2613C"
                 strokeWidth="3"
                 strokeLinejoin="miter"
                 strokeLinecap="butt"
                 opacity="0.4"
               />
-              <rect x="70" y="66" width="9" height="14" rx="1" fill="#f56038">
+              <rect x="70" y="66" width="9" height="14" rx="1" fill="#C2613C">
                 <animate
                   attributeName="opacity"
                   values="1;0;1"
@@ -62,16 +62,16 @@ const Footer = () => {
                   repeatCount="indefinite"
                 />
               </rect>
-              <circle cx="18" cy="18" r="2" fill="#f56038" opacity="0.5" />
-              <circle cx="82" cy="82" r="2" fill="#f56038" opacity="0.5" />
+              <circle cx="18" cy="18" r="2" fill="#C2613C" opacity="0.5" />
+              <circle cx="82" cy="82" r="2" fill="#C2613C" opacity="0.5" />
             </svg>
             <div className="">
-              <div className="text-[16px]  font-bold text-[#eeebe5]">
+              <div className="font-['Playfair_Display'] text-[17px] font-bold text-[#EDE7DD]">
                 Saksham{" "}
-                <span className=" font-normal text-[#f56038]">Shukla</span>
+                <span className="font-normal text-[#C2613C]">Shukla</span>
               </div>
-              <p className="text-[11px] text-[#f56038] font-mono tracking-[1px]">
-                ~ Coding with purpose.
+              <p className="font-['Playfair_Display'] italic text-[12px] text-[#756E64] tracking-[0.5px]">
+                Coding with purpose.
               </p>
             </div>
           </div>
@@ -83,11 +83,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-13 p-5 mb-14">
           {/* About col */}
           <div className="md:col-span-1">
-            <p className="text-[11px] font-mono text-[#f56038] tracking-[2px] uppercase mb-5">
+            <p className="font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-5">
               About
             </p>
-            <p className="text-[13px] text-[#888] leading-[1.8]">
-              Full Stack Developer from Indore, India. Building fast, scalable
+            <p className="text-[13px] text-[#AFA89D] leading-[1.8]">
+              Full Stack Engineer from Indore, India. Building fast, scalable
               web apps with the MERN stack. Open to work.
             </p>
 
@@ -96,7 +96,7 @@ const Footer = () => {
               download="Saksham_Shukla_Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 border border-white/[0.11] rounded-[8px] text-[11.5px] font-semibold text-[#888] hover:border-[#f56038] hover:text-[#f56038] hover:bg-[#f56038]/10 transition-all duration-200"
+              className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 border border-[#EDE7DD]/11 rounded-lg text-[11.5px] font-semibold text-[#AFA89D] hover:border-[#EDE7DD]/20 hover:text-[#EDE7DD] transition-all duration-200"
             >
               Download Resume
             </a>
@@ -104,7 +104,7 @@ const Footer = () => {
 
           {/* Let's connect */}
           <div>
-            <p className="text-[11px] font-mono text-[#f56038] tracking-[2px] uppercase mb-5">
+            <p className="font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-5">
               Connect
             </p>
             <div className="flex flex-col gap-4">
@@ -117,7 +117,7 @@ const Footer = () => {
                 {
                   icon: <Linkedin size={14} />,
                   label: "LinkedIn",
-                  href: "https://www.linkedin.com/in/saksham-shukla-9758602a6",
+                  href: "https://www.linkedin.com/in/sakshamshukla-dev/",
                 },
 
                 {
@@ -131,9 +131,9 @@ const Footer = () => {
                   href={l.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2.5 text-[13px] text-[#888] hover:text-[#f56038] transition-colors duration-200 group"
+                  className="flex items-center gap-2.5 text-[13px] text-[#AFA89D] hover:text-[#EDE7DD] transition-colors duration-200 group"
                 >
-                  <span className="text-[#555] group-hover:text-[#f56038] transition-colors">
+                  <span className="text-[#756E64] group-hover:text-[#EDE7DD] transition-colors">
                     {l.icon}
                   </span>
                   {l.label}
@@ -144,7 +144,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <p className="text-[11px] font-mono text-[#f56038] tracking-[2px] uppercase mb-5">
+            <p className="font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-5">
               Navigate
             </p>
             <div className="flex flex-col gap-4">
@@ -159,8 +159,8 @@ const Footer = () => {
                   className={({ isActive }) =>
                     `text-[13px] transition-colors duration-200 ${
                       isActive
-                        ? "text-[#f56038]"
-                        : "text-[#888] hover:text-[#f56038]"
+                        ? "text-[#EDE7DD]"
+                        : "text-[#AFA89D] hover:text-[#EDE7DD]"
                     }`
                   }
                 >
@@ -172,7 +172,7 @@ const Footer = () => {
 
           {/* Build with me */}
           <div>
-            <p className="text-[11px] font-mono text-[#f56038] tracking-[2px] uppercase mb-5">
+            <p className="font-mono text-[10px] font-medium text-[#756E64] tracking-[2.5px] uppercase mb-5">
               Build with Me
             </p>
             <div className="flex flex-col gap-4">
@@ -198,9 +198,9 @@ const Footer = () => {
                   href={l.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2.5 text-[13px] text-[#888] hover:text-[#f56038] transition-colors duration-200 group"
+                  className="flex items-center gap-2.5 text-[13px] text-[#AFA89D] hover:text-[#EDE7DD] transition-colors duration-200 group"
                 >
-                  <span className="text-[#555] group-hover:text-[#f56038] transition-colors">
+                  <span className="text-[#756E64] group-hover:text-[#EDE7DD] transition-colors">
                     {l.icon}
                   </span>
                   {l.label}
@@ -211,12 +211,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/[0.06] pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-[11px] text-[#444] font-mono">
+        <div className="border-t border-[#EDE7DD]/6 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-[11px] text-[#756E64] font-mono">
             © {new Date().getFullYear()} Saksham Shukla. All rights reserved.
           </p>
-          <p className="text-[11px] text-[#444] font-mono">
-            Built with React · Hosted on AWS
+          <p className="text-[11px] text-[#756E64] font-mono">
+            Built with React · Hosted on Vercel
           </p>
         </div>
       </div>
@@ -224,7 +224,7 @@ const Footer = () => {
       {/* Scroll to top */}
       <button
         onClick={scrollToTop}
-        className="absolute cursor-pointer right-6 bottom-8 w-9 h-9 bg-[#f56038] hover:bg-[#ff8255] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-[0_6px_20px_rgba(245,96,56,0.4)] hover:-translate-y-1 transition-all duration-200"
+        className="absolute cursor-pointer right-6 bottom-8 w-9 h-9 bg-[#C2613C] hover:bg-[#CC6E49] text-[#1F1D1B] rounded-full flex items-center justify-center hover:-translate-y-1 transition-all duration-200"
         aria-label="Back to top"
       >
         <ArrowUp size={16} />

@@ -2,18 +2,18 @@ import { Badge } from "../../../components/ui/badge";
 
 // OneClarity Card
 export const OneClarityContent = () => (
-  <div className="bg-[#111] border border-white/[0.06] rounded-[18px] p-6">
+  <div className="bg-[#28251F] border border-[#EDE7DD]/6 rounded-2xl p-6">
     <div className="flex items-center gap-3 mb-5">
       <img
         src="https://onecalrity.s3.ap-south-1.amazonaws.com/company-logos/1773140212061-eb28faac-c266-4e0e-a091-9c58da949d2d.png"
         alt="OneClarity"
-        className="w-9 h-9 rounded-[9px] object-contain bg-white/5"
+        className="w-9 h-9 rounded-lg object-contain bg-[#1F1D1B]"
         onError={(e) => {
           (e.target as HTMLImageElement).style.display = "none";
         }}
       />
       <div>
-        <h3 className="text-[15px] font-bold text-[#eeebe5]">
+        <h3 className="text-[15px]">
           <a
             href="https://www.linkedin.com/company/oneclarity"
             target="_blank"
@@ -22,28 +22,26 @@ export const OneClarityContent = () => (
             OneClarity.ai
           </a>
         </h3>
-        <p className="text-[12px] text-[#bebcbc]">
-          Full Stack Developer Intern
-        </p>
+        <p className="text-[12px] text-[#AFA89D]">Full Stack Engineer Intern</p>
       </div>
     </div>
 
     <div className="flex gap-2 flex-wrap mb-5">
       <Badge
         variant="outline"
-        className="text-[#f56038] border-[#f56038]/30 bg-[#f56038]/10 text-[10px]"
+        className="text-[#AFA89D] border-[#EDE7DD]/16 bg-transparent text-[10px]"
       >
         Remote
       </Badge>
       <Badge
         variant="outline"
-        className="text-[#4ade80] border-[#4ade80]/30 bg-[#4ade80]/10 text-[10px]"
+        className="text-[#7C8F65] border-[#7C8F65]/30 bg-[#7C8F65]/10 text-[10px]"
       >
         Present
       </Badge>
       <Badge
         variant="outline"
-        className="text-[#999] border-white/10 text-[10px]"
+        className="text-[#756E64] border-[#EDE7DD]/16 bg-transparent text-[10px]"
       >
         Sept 2025 – Present
       </Badge>
@@ -53,35 +51,35 @@ export const OneClarityContent = () => (
       {[
         "Built shareable link invitation feature used across the platform",
         "Developed multiple dashboard APIs for employee, manager and admin roles",
-        "Built Open Labs — open source initiative with superadmin & user contribution APIs",
+        "Built a custom Role-Based Access Control (RBAC) system",
+        "Built Open Labs, an open source initiative with superadmin & user contribution APIs",
         "Created blog pages, stories, and career page APIs",
         "Implemented multilingual support using Google Translate API with country detection and dynamic modals",
         "Integrated multiple AI APIs on Node.js working alongside the AI team",
-        "Built a template preview application",
       ].map((h) => (
         <li
           key={h}
-          className="flex gap-2.5 text-[12.5px] text-[#999] leading-[1.6]"
+          className="flex gap-2.5 text-[12.5px] text-[#AFA89D] leading-[1.6]"
         >
-          <span className="text-[#f56038] mt-1 flex-shrink-0">→</span>
+          <span className="text-[#756E64] mt-2 shrink-0 w-1 h-1 rounded-full bg-[#756E64]" />
           {h}
         </li>
       ))}
     </ul>
 
-    <div className="flex gap-2 flex-wrap pt-4 border-t border-white/[0.06]">
+    <div className="flex gap-2 flex-wrap pt-4 border-t border-[#EDE7DD]/6">
       {[
         "React",
         "Node.js",
         "Express",
-        "MongoDB",
+        "MySQL",
         "TypeScript",
         "Google Translate API",
         "AI APIs",
       ].map((t) => (
         <span
           key={t}
-          className="bg-white/[0.04] border border-white/[0.06] px-2 py-1 rounded-[5px] text-[10px] text-[#bebcbc] font-mono"
+          className="bg-[#1F1D1B] border border-[#EDE7DD]/6 px-2 py-1 rounded text-[10px] text-[#756E64] font-mono"
         >
           {t}
         </span>
@@ -92,38 +90,36 @@ export const OneClarityContent = () => (
 
 // Education Card
 export const EducationContent = () => (
-  <div className="bg-[#111] border border-white/[0.06] rounded-[18px] p-6">
+  <div className="bg-[#28251F] border border-[#EDE7DD]/6 rounded-2xl p-6">
     <div className="flex gap-2 flex-wrap mb-4">
       <Badge
         variant="outline"
-        className="text-[#999] border-white/10 text-[10px]"
+        className="text-[#756E64] border-[#EDE7DD]/16 bg-transparent text-[10px]"
       >
         2021 – 2026
       </Badge>
       <Badge
         variant="outline"
-        className="text-[#999] border-white/10 text-[10px]"
+        className="text-[#756E64] border-[#EDE7DD]/16 bg-transparent text-[10px]"
       >
         Indore, India
       </Badge>
     </div>
-    <h3 className="text-[15px] font-bold text-[#eeebe5] mb-1">
-      IIPS, DAVV Indore
-    </h3>
-    <p className="text-[13px] text-[#999] mb-4">
+    <h3 className="text-[15px] mb-1">IIPS, DAVV Indore</h3>
+    <p className="text-[13px] text-[#AFA89D] mb-4">
       Integrated Master of Computer Applications (I-MCA)
     </p>
     <ul className="space-y-2">
       {[
-        "5 year integrated program — BCA + MCA combined",
-        "Final year — graduating 2026",
+        "5 year integrated program, BCA + MCA combined",
+        "Final year, graduating 2026",
         "Focus on full stack development and algorithms",
       ].map((item) => (
         <li
           key={item}
-          className="flex gap-2 text-[12px] text-[#bebcbc] leading-[1.6]"
+          className="flex gap-2 text-[12px] text-[#AFA89D] leading-[1.6]"
         >
-          <span className="text-[#c0bdb8] flex-shrink-0">·</span>
+          <span className="text-[#756E64] shrink-0">·</span>
           {item}
         </li>
       ))}
@@ -133,13 +129,13 @@ export const EducationContent = () => (
 
 // DSA Card
 export const DSAContent = () => (
-  <div className="bg-[#111] border border-white/[0.06] rounded-[18px] p-6">
+  <div className="bg-[#28251F] border border-[#EDE7DD]/6 rounded-2xl p-6">
     <div className="flex gap-8 mb-5">
       <div>
-        <div className="text-[42px] font-bold tracking-[-2px] text-[#f56038] leading-none">
+        <div className="text-[42px] tracking-[-2px] text-[#EDE7DD] leading-none">
           450+
         </div>
-        <div className="text-[10px] text-[#bebcbc] font-mono tracking-[1.5px] uppercase mt-1">
+        <div className="text-[10px] text-[#756E64] font-mono tracking-[1.5px] uppercase mt-1">
           Problems Solved
         </div>
       </div>
@@ -150,7 +146,7 @@ export const DSAContent = () => (
       href="https://leetcode.com/u/saksham729/"
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#999] border border-white/[0.11] px-3 py-1.5 rounded-[8px] hover:border-[#f56038] hover:text-[#f56038] transition-all duration-200"
+      className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#AFA89D] border border-[#EDE7DD]/11 px-3 py-1.5 rounded-lg hover:border-[#EDE7DD]/20 hover:text-[#EDE7DD] transition-all duration-200"
     >
       View LeetCode Profile ↗
     </a>
@@ -164,9 +160,9 @@ export const RoadmapContent = () => {
       status: "now",
       label: "NOW",
       name: "Python",
-      desc: "Just started — building foundations.",
+      desc: "Just started, building foundations.",
       progress: 10,
-      color: "#f56038",
+      color: "#C2613C",
     },
     {
       status: "now",
@@ -174,23 +170,23 @@ export const RoadmapContent = () => {
       name: "TypeScript",
       desc: "Actively using in projects.",
       progress: 50,
-      color: "#f56038",
+      color: "#C2613C",
     },
     {
       status: "next",
       label: "NEXT",
       name: "AWS Cloud",
-      desc: "EC2, S3, Lambda — on the roadmap.",
+      desc: "On the roadmap: EC2, S3, Lambda.",
       progress: 5,
-      color: "#555",
+      color: "#756E64",
     },
     {
       status: "next",
       label: "NEXT",
       name: "Agentic AI",
-      desc: "Sparked by working with AI team at OneClarity.",
+      desc: "Curious about multi-step, tool-using AI agents.",
       progress: 5,
-      color: "#555",
+      color: "#756E64",
     },
     {
       status: "done",
@@ -198,22 +194,22 @@ export const RoadmapContent = () => {
       name: "MERN Stack",
       desc: "Production shipped. Bread and butter.",
       progress: 88,
-      color: "#4ade80",
+      color: "#7C8F65",
     },
     {
       status: "done",
       label: "SOLID",
       name: "REST APIs",
-      desc: "Built and consumed multiple production APIs dashboards, auth, integrations.",
+      desc: "Built and integrated production-grade APIs.",
       progress: 82,
-      color: "#4ade80",
+      color: "#7C8F65",
     },
   ];
 
   const pillStyles: Record<string, string> = {
-    now: "bg-[#f56038]/10 text-[#f56038] border-[#f56038]/25",
-    next: "bg-white/[0.04] text-[#bebcbc] border-white/10",
-    done: "bg-[#4ade80]/10 text-[#4ade80] border-[#4ade80]/20",
+    now: "bg-[#C2613C]/10 text-[#C2613C] border-[#C2613C]/25",
+    next: "bg-[#1F1D1B] text-[#756E64] border-[#EDE7DD]/8",
+    done: "bg-[#7C8F65]/10 text-[#7C8F65] border-[#7C8F65]/20",
   };
 
   return (
@@ -221,7 +217,7 @@ export const RoadmapContent = () => {
       {items.map((item) => (
         <div
           key={item.name}
-          className="bg-[#111] border border-white/[0.06] rounded-[14px] p-4 hover:border-white/[0.11] hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-[#28251F] border border-[#EDE7DD]/6 rounded-xl p-4 hover:border-[#EDE7DD]/11 hover:-translate-y-0.5 transition-all duration-200"
         >
           <div
             className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[9.5px] font-bold font-mono tracking-[1px] mb-3 ${pillStyles[item.status]}`}
@@ -229,13 +225,13 @@ export const RoadmapContent = () => {
             {item.status === "now" ? "●" : item.status === "done" ? "✓" : "◎"}{" "}
             {item.label}
           </div>
-          <div className="text-[14px] font-bold text-[#eeebe5] mb-1">
+          <div className="text-[14px] font-semibold text-[#EDE7DD] mb-1">
             {item.name}
           </div>
-          <div className="text-[11px] text-[#bebcbc] leading-[1.55] mb-3">
+          <div className="text-[11px] text-[#AFA89D] leading-[1.55] mb-3">
             {item.desc}
           </div>
-          <div className="h-[2px] bg-white/[0.05] rounded-full overflow-hidden">
+          <div className="h-0.5 bg-[#EDE7DD]/8 rounded-full overflow-hidden">
             <div
               className="h-full rounded-full"
               style={{ width: `${item.progress}%`, background: item.color }}

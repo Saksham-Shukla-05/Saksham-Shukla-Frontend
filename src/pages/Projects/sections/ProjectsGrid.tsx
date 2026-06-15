@@ -15,41 +15,32 @@ const ProjectsGrid = () => {
           <div>
             <SectionLabel text="work" />
             <h2
-              className="font-bold text-[#eeebe5] tracking-[-1.5px] leading-[1]"
+              className="leading-none"
               style={{ fontSize: "clamp(32px, 4vw, 46px)" }}
             >
               Selected{" "}
-              <span
-                className="text-[#c0bdb8]"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontStyle: "italic",
-                  fontWeight: 400,
-                }}
-              >
-                projects
-              </span>
+              <span className="italic text-[#AFA89D]">projects</span>
             </h2>
           </div>
           <a
             href="https://github.com/Saksham-Shukla-05"
             target="_blank"
             rel="noreferrer"
-            className="font-mono text-[11.5px] text-[#bebcbc] tracking-[1px] hover:text-[#f56038] transition-colors"
+            className="font-mono text-[11.5px] text-[#756E64] tracking-[1px] hover:text-[#EDE7DD] transition-colors"
           >
             ALL ON GITHUB ↗
           </a>
         </div>
 
         {/* Featured — 2 col */}
-        <div className="grid md:grid-cols-[3fr_2fr] gap-3 mb-3">
+        <div className="grid md:grid-cols-[3fr_2fr] gap-5 mb-5">
           {featured.map((p, i) => (
             <ProjectCard key={p._id} project={p} index={i} featured={i === 0} />
           ))}
         </div>
 
         {/* Rest — 3 col */}
-        <div className="grid md:grid-cols-3 gap-3">
+        <div className="grid md:grid-cols-3 gap-5">
           {rest.map((p, i) => (
             <ProjectCard key={p._id} project={p} index={i + 2} />
           ))}
@@ -60,7 +51,7 @@ const ProjectsGrid = () => {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-2.5 border border-white/[0.11] rounded-[9px] text-[12.5px] font-semibold text-[#999] hover:border-[#f56038] hover:text-[#f56038] transition-all duration-200"
+              className="px-6 py-2.5 border border-[#EDE7DD]/11 rounded-xl text-[12.5px] font-semibold text-[#AFA89D] hover:border-[#C2613C]/40 hover:text-[#C2613C] transition-all duration-200"
             >
               Show all {projects.length} projects ↓
             </button>

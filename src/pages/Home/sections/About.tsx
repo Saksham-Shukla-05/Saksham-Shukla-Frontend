@@ -1,28 +1,21 @@
 import { FileText, Github, Linkedin } from "lucide-react";
 import SectionLabel from "../../../components/shared/SectionLabel";
 import { SiLeetcode } from "react-icons/si";
-const cards = [
+
+const points = [
   {
-    icon: "⚡",
-    bg: "rgba(245,96,56,.1)",
     title: "Ships to production",
     body: "Every project is live. Not just localhost.",
   },
   {
-    icon: "🧱",
-    bg: "rgba(255,255,255,.05)",
     title: "Clean architecture",
     body: "Scalable structure, reusable components.",
   },
   {
-    icon: "📈",
-    bg: "rgba(74,222,128,.07)",
     title: "Always leveling up",
-    body: "Python & AWS — currently in progress.",
+    body: "Python & AWS, currently in progress.",
   },
   {
-    icon: "🎯",
-    bg: "rgba(59,130,246,.07)",
     title: "Thinks before typing",
     body: "450+ LeetCode problems. Algorithms first.",
   },
@@ -30,41 +23,32 @@ const cards = [
 
 const About = () => {
   return (
-    <section className="px-6 py-24 border-b border-white/[0.06]">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-start">
+    <section className="px-6 py-24 border-b border-[#EDE7DD]/6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-[7fr_5fr] gap-16 items-start">
         {/* Left */}
         <div>
-          <SectionLabel text="about" />
+          <SectionLabel text="about" index="01" />
           <h2
-            className="font-bold text-[#eeebe5] tracking-[-1.5px] leading-[1.02] mb-5"
+            className="leading-none mb-5"
             style={{ fontSize: "clamp(32px, 4vw, 46px)" }}
           >
             A dev who ships{" "}
-            <span
-              className="text-[#c0bdb8]"
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontStyle: "italic",
-                fontWeight: 400,
-              }}
-            >
-              real things
-            </span>
+            <span className="italic text-[#C2613C]">real things</span>
           </h2>
-          <p className="text-[14.5px] text-[#999] leading-[1.85] mb-4">
+          <p className="text-[14.5px] text-[#AFA89D] leading-[1.85] mb-4">
             I started with{" "}
-            <span className="text-[#eeebe5] font-medium">Java</span>, discovered
+            <span className="text-[#EDE7DD] font-medium">Java</span>, discovered
             web development, and never stopped. I've built and{" "}
-            <span className="text-[#eeebe5] font-medium">
+            <span className="text-[#EDE7DD] font-medium">
               deployed real projects
-            </span>{" "}
-            — not just tutorials. Currently interning at{" "}
-            <span className="text-[#f56038] font-medium">OneClarity.ai</span> as
-            a Full Stack Developer.
+            </span>
+            , not just tutorials. Currently interning at{" "}
+            <span className="text-[#C2613C] font-medium">OneClarity.ai</span> as
+            a Full Stack Engineer.
           </p>
-          <p className="text-[14.5px] text-[#999] leading-[1.85] mb-8">
+          <p className="text-[14.5px] text-[#AFA89D] leading-[1.85] mb-8">
             Final year of{" "}
-            <span className="text-[#eeebe5] font-medium">
+            <span className="text-[#EDE7DD] font-medium">
               Integrated MCA at IIPS, DAVV Indore.
             </span>{" "}
             Open to full-time roles, internships, and freelance projects.
@@ -79,7 +63,7 @@ const About = () => {
               {
                 label: "LinkedIn",
                 icon: <Linkedin className="w-4 h-4" />,
-                href: "https://www.linkedin.com/in/saksham-shukla-9758602a6",
+                href: "https://www.linkedin.com/in/sakshamshukla-dev/",
               },
               {
                 label: "LeetCode",
@@ -97,7 +81,7 @@ const About = () => {
                 href={l.href}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 border border-white/[0.11] rounded-[9px] text-[12px] font-semibold text-[#999] hover:border-[#f56038] hover:text-[#f56038] hover:bg-[#f56038]/10 transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2 border border-[#EDE7DD]/11 rounded-lg text-[12px] font-semibold text-[#AFA89D] hover:border-[#EDE7DD]/20 hover:text-[#EDE7DD] transition-all duration-200"
               >
                 {l.icon}
                 <span>{l.label}</span>
@@ -106,24 +90,23 @@ const About = () => {
           </div>
         </div>
 
-        {/* Right — cards */}
-        <div className="flex flex-col gap-3">
-          {cards.map((c) => (
+        {/* Right — numbered list */}
+        <div className="flex flex-col md:pt-2">
+          {points.map((c, i) => (
             <div
               key={c.title}
-              className="grid grid-cols-[42px_1fr] gap-4 bg-[#111] border border-white/[0.06] rounded-[14px] p-5 hover:border-white/[0.11] hover:translate-x-1 transition-all duration-200"
+              className={`flex gap-6 py-6 ${
+                i !== 0 ? "border-t border-[#EDE7DD]/6" : "pt-0"
+              }`}
             >
-              <div
-                className="w-[42px] h-[42px] rounded-[11px] flex items-center justify-center text-lg flex-shrink-0"
-                style={{ background: c.bg }}
-              >
-                {c.icon}
-              </div>
+              <span className="font-['Playfair_Display'] italic text-[32px] text-[#756E64] leading-none w-11 flex-shrink-0">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <div>
-                <div className="text-[13.5px] font-semibold text-[#eeebe5] mb-1">
+                <div className="text-[14px] font-semibold text-[#EDE7DD] mb-1.5">
                   {c.title}
                 </div>
-                <div className="text-[12px] text-[#999] leading-[1.55]">
+                <div className="text-[12.5px] text-[#AFA89D] leading-[1.6]">
                   {c.body}
                 </div>
               </div>
